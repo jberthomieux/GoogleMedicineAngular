@@ -1,0 +1,33 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Bloodbank List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bloodbank of bloodbanks | async">
+            <td>{{bloodbank.id}}</td>
+            <td>{{bloodbank.type}}</td>
+            <td>{{bloodbank.qty}}</td>
+            <td>{{bloodbank.price}}</td>
+             <td>
+                <button (click)="deleteBloodbank(bloodbank.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updateBloodbank(bloodbank.id)" class="btn btn-info" style="margin-left: 10px">Update</button> 
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+

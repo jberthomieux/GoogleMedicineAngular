@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Medicine Shop List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Area</th>
+            <th>Phone Number</th>
+            <th>24h Op Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medicineShop of medicineShops | async">
+            <td>{{medicineShop.medId}}</td>
+            <td>{{medicineShop.medshopName}}</td>
+            <td>{{medicineShop.medshopAddress}}</td>
+            <td>{{medicineShop.medcity}}</td>
+            <td>{{medicineShop.medarea}}</td>
+            <td>{{medicineShop.medshopNumber}}</td>
+            <td>{{medicineShop.med24h}}</td>
+             <td>
+                <button (click)="deleteMedicineShop(medicineShop.medId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateMedicineShop(medicineShop.medId)" class="btn btn-info"style="margin-left: 10px">Update</button> 
+                <!--button (click)="medicineShopDetails(medicineShop.medId)" class="btn btn-info" style="margin-left: 10px">Add User</button-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+

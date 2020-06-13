@@ -1,0 +1,45 @@
+
+
+<div class="col-md-6">
+  
+    <h2 class="text-center">Add Medicine_Shop</h2>
+
+  <form>
+    <div class="form-group">
+        <label for="bbName">Name</label>
+        <input [(ngModel)]="medicineshop.medshopName" placeholder="Shop Name" name="medshopName" class="form-control" id="medshopName">
+      </div>
+      <div class="form-group">
+        <label for="medshopAddress">Address</label>
+        <input [(ngModel)]="medicineshop.medshopAddress" placeholder="Address" name="medshopAddress" class="form-control" id="medshopAddress">
+      </div>
+      <div class="form-group">
+        <label for="medshopcity">city:</label>
+        <input [(ngModel)]="medicineshop.medcity" placeholder="City" name="medcity" class="form-control" id="medcity">
+      </div>
+      
+      <div class="form-group">
+        <label for="medarea">Area</label>
+        <input [(ngModel)]="medicineshop.medarea" placeholder="Ara" name="medarea" class="form-control" id="medarea">
+      </div>
+      
+      <div class="form-group">
+        <label for="medbb24h">24h Operation</label>
+        <input [(ngModel)]="medicineshop.med24h" placeholder="Operation hrs" name="med24h" class="form-control" id="med24h">
+      </div>
+      <div class="form-group">
+        <label for="medshopNumber">Phone Number</label>
+        <input [(ngModel)]="medicineshop.medshopNumber" placeholder="Phone Number" name="medshopNumber" class="form-control" id="medshopNumber">
+      </div>
+    <div class="form-group">
+      <label for="id">User Id</label>
+      <input [(ngModel)]="user.id" placeholder="user id" class="form-control" name="id">
+    </div>
+    
+    <button class="btn btn-success" (click)="createMedicineShop()">Add Medicine_Shop</button>
+  </form>
+  </div>
+  
+  
+
+

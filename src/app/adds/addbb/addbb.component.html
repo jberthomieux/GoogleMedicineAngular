@@ -1,0 +1,29 @@
+ 
+ <div class="col-md-6">
+    <h2 class="text-center">Add Blood</h2>
+    
+  <form>
+    <div class="form-group">
+        <label for="name">Type</label>
+        <input [(ngModel)]="bloodbank.type" placeholder="Type" name="type" class="form-control" id="type">
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input [(ngModel)]="bloodbank.price" placeholder="price" name="name" class="form-control" id="name">
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input [(ngModel)]="bloodbank.qty" placeholder="quantity" name="qty" class="form-control" id="qty">
+      </div>
+      
+    <div class="form-group">
+      <label for="bbsid">Shop ID:</label>
+      <input [(ngModel)]="bloodbankshop.bbId" placeholder="Shop Id" class="form-control" name="bbId">
+    </div>
+    
+    <button class="btn btn-success" (click)="createBloodbank()">Add Blood</button>
+  </form>
+  </div>
+  
+  
+

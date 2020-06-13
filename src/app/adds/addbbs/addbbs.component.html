@@ -1,0 +1,43 @@
+
+<div class="col-md-6">
+    <h2 class="text-center">Add BloodShop</h2>
+    
+  <form>
+    <div class="form-group">
+        <label for="bbName">Name</label>
+        <input [(ngModel)]="bloodbankshop.bbName" placeholder="Shop Name" name="bbName" class="form-control" id="bbName">
+      </div>
+      <div class="form-group">
+        <label for="bbAddress">Address</label>
+        <input [(ngModel)]="bloodbankshop.bbAddress" placeholder="Address" name="bbAddress" class="form-control" id="bbAddress">
+      </div>
+      <div class="form-group">
+        <label for="bbcity">city:</label>
+        <input [(ngModel)]="bloodbankshop.bbcity" placeholder="City" name="bbcity" class="form-control" id="bbcity">
+      </div>
+      
+      <div class="form-group">
+        <label for="bbarea">Area</label>
+        <input [(ngModel)]="bloodbankshop.bbarea" placeholder="Ara" name="bbarea" class="form-control" id="bbarea">
+      </div>
+      
+      <div class="form-group">
+        <label for="bb24h">24h Operation</label>
+        <input [(ngModel)]="bloodbankshop.bb24h" placeholder="Operation hrs" name="bb24h" class="form-control" id="bb24h">
+      </div>
+      <div class="form-group">
+        <label for="bbNumber">Phone Number</label>
+        <input [(ngModel)]="bloodbankshop.bbNumber" placeholder="Phone number" name="bbNumber" class="form-control" id="bbNumber">
+      </div>
+    <div class="form-group">
+      <label for="id">User</label>
+      <input [(ngModel)]="user.id" placeholder="user" class="form-control" name="id">
+    </div>
+    
+    <button class="btn btn-success" (click)="createBloodbankShop()">Add BloodShop</button>
+  </form>
+  </div>
+  
+  
+
+

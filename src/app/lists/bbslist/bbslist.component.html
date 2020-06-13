@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Bloodbank Shops</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>city</th>
+            <th>Area</th>
+            <th>24h Operation</th>
+            <th>Phone Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let bloodbankshop of bloodbankshops | async">
+            <td>{{bloodbankshop.bbId}}</td>
+            <td>{{bloodbankshop.bbName}}</td>
+            <td>{{bloodbankshop.bbAddress}}</td>
+            <td>{{bloodbankshop.bbcity}}</td>
+            <td>{{bloodbankshop.bbarea}}</td>
+            <td>{{bloodbankshop.bb24h}}</td>
+            <td>{{bloodbankshop.bbNumber}}</td>
+             <td>
+                <button (click)="deleteBBShop(bloodbankshop.bbId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateBBShop(bloodbankshop.bbId)" class="btn btn-info" style="margin-left: 10px">Update</button> 
+                <!--button (click)="createUser()" class="btn btn-info" style="margin-left: 10px">Add User</button-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+

@@ -1,0 +1,70 @@
+<!-- Search form -->
+
+<button (click)="toggle()" id="bt">
+  {{buttonName}}
+</button>
+
+
+<ng-container *ngIf="show">
+<form class="form-inline md-form form-sm active-purple-2">
+    <input class="form-control form-control-sm mr-3 w-75" type="text" [(ngModel)]='type'
+    name="type" placeholder="Search" aria-label="Search">
+    <button class="btn btn-success" (click)=" reloadData1()">Blood</button>
+
+  </form>
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+      <table ng-hide class="table table-striped">
+        <thead>
+          <tr>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let search of search1">
+            <td>{{search.price}}</td>
+            <td>{{search.type}}</td>
+            <td>{{search.address}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</ng-container>
+<ng-container *ngIf="!show">
+  <form class="form-inline md-form form-sm active-purple-2">
+    <input class="form-control form-control-sm mr-3 w-75" name="text" [(ngModel)]='name'
+    name="name" placeholder="Search" aria-label="Search">
+    <button class="btn btn-success" (click)=" reloadData2()">Medicine</button>
+  </form>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Price</th>
+            <th>Name</th>
+            <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let search of search2">
+            <td>{{search.price}}</td>
+            <td>{{search.name}}</td>
+            <td>{{search.medshopAddress}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> 
+
+</ng-container>

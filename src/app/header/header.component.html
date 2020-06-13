@@ -1,0 +1,26 @@
+<header>
+    <nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+      <ul class='navbar-nav'>
+      <span>GoogleSearch</span>
+      
+
+        <a *ngIf= "!loginService.isUserLoggedIn()" style="margin-left:10px" routerLink="/login"> Login</a>
+          <a *ngIf= "loginService.isUserLoggedIn() && checkIfAdmin()" style="margin-left:10px" routerLink="/adduser"> Register</a>
+          <li><a *ngIf="checkIfAdmin()" routerLink="/users"> List User</a></li>
+          <li><a *ngIf="checkIfAdmin()" style="margin-left:10px" routerLink="/adduser">Add User</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()" style="margin-left:10px" routerLink="/medicines">Medicines</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()" style="margin-left:10px" routerLink="/addmed">Add Medicine</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()" style="margin-left:10px" routerLink="/bloodbanks">Bloodbanks</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()" style="margin-left:10px" routerLink="/addbb">Add Blood</a></li>
+          <li><a *ngIf=" checkIfAdmin()" style="margin-left:10px" routerLink="/medicineshops">Medicine_Shops</a></li>
+          <li><a *ngIf=" checkIfAdmin()" style="margin-left:10px" routerLink="/addmedshop">Add Medicine_Shops</a></li>
+          <li><a *ngIf=" checkIfAdmin()" style="margin-left:10px" routerLink="/bloodbankshops">Bloodbank_Shops</a></li>
+          <li><a *ngIf=" checkIfAdmin()" style="margin-left:10px" routerLink="/addbbs">Add Blood_Shops</a></li>
+          <li><a *ngIf="!loginService.isUserLoggedIn()" style="margin-left:10px" routerLink="/search">search</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()"  style="margin-right:10px" routerLink='/logout' class='nav-link'>Logout</a></li>
+         
+      </ul>
+    </nav>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </header>
